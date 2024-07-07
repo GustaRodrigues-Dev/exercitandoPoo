@@ -61,12 +61,12 @@ public class Bootcamp {
 		return dataFinal;
 	}
 
-	@Override
+
 	public int hashCode() {
 		return Objects.hash(conteudos, dataFinal, dataInicial, descricao, devsInscritos, nome);
 	}
 
-	@Override
+
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;

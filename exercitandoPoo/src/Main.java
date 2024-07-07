@@ -1,6 +1,8 @@
 import java.time.LocalDate;
 
+import dominio.Bootcamp;
 import dominio.Curso;
+import dominio.Dev;
 import dominio.Mentoria;
 
 
@@ -35,6 +37,23 @@ public class Main {
 			
 			mentoria.setTitulo("Não perca!");
 		
+			
+			Bootcamp bootcamp = new Bootcamp();
+				bootcamp.setNome("Aprendendo Poo Java");
+				bootcamp.setDescricao("Excelente bootcamp para praticar.");
+				bootcamp.getConteudos().add(curso1);
+				bootcamp.getConteudos().add(curso2);
+				bootcamp.getConteudos().add(mentoria);
+			
+			Dev devLuiz = new Dev();
+				devLuiz.setNome("Luiz");
+				devLuiz.inscreverBootcamp(bootcamp);
+			
+				devLuiz.progredir();
+			
+			System.out.println("Conteúdos inscritos" + devLuiz.getConteudosInscritos());
+			System.out.println("Conteúdos concluidos" + devLuiz.getConteudosConcluidos());
+			System.out.println("XP" + devLuiz.calcularTotalXp());
 	}	
 	
 }
